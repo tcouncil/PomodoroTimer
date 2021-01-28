@@ -76,7 +76,7 @@ function Pomodoro() {
 
   // Start our break session
   function focusSessionExpired() {
-    new Audio(`${process.env.PUBLIC_URL}/alarm/submarine-dive-horn.mp3`).play();
+    new Audio(`https://bigsoundbank.com/UPLOAD/mp3/1482.mp3`).play(); // Play's a gong sound
     setOnBreak(state => state = true);
     setDurationProgress(progress => progress = 0);
     setDurationSeconds(seconds => seconds = 0);
@@ -85,7 +85,7 @@ function Pomodoro() {
 
   // Reset our focus session
   function breakSessionExpired() {
-    new Audio(`${process.env.PUBLIC_URL}/alarm/alarm-clock-small-beeps.mp3`).play();
+    new Audio(`https://bigsoundbank.com/UPLOAD/mp3/0899.mp3`).play(); // Play's a bell alert
     setOnBreak(state => state = false);
     setDurationProgress(progress => progress = 0);
     setDurationSeconds(seconds => seconds = 0);
